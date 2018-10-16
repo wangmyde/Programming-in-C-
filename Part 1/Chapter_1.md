@@ -34,7 +34,7 @@ The functions from the library files required for the program are already bound 
 or: 
     cout << ”Hello C++- friends!“;
     cout << endl;
-or: c
-    out<< ”Hello C++- friends!\n“;
+or: 
+    cout<< ”Hello C++- friends!\n“;
 
   
