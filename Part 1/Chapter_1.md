@@ -39,4 +39,14 @@ or:
 
     cout<< "Hello C++- friends!\n";
 
+## 1.7 main function
+The main function (main program) is where a program starts its execution.
+
+## 1.8 system("pause");
+The C library provides a system function called `system("pause")`;. It is used to make the screen or console wait for a key press.
+
+## 1.9 system("cls");
+The `system("cls")`; command fully deletes the screen output. The cursor is then located at the top left at the beginning of the command line.
+
+
   
