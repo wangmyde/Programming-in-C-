@@ -62,7 +62,7 @@ To call a function, you need to pass the function name along with a list of the 
     int multiply(int, int); // Prototypes of the multiply and showResult functions
     void showResult(int);
 	int main()
-	{
+    {
 		int result; // Declaration of a variable
 		result = multiply(3, 4); // Calling multiply; function with constants 3 and 4 as input parameters
 		// The result of the calculation is assigned to the result variable
