@@ -30,11 +30,13 @@ The functions from the library files required for the program are already bound 
 > In the second step, the linker gets to know the actual library files, for example <string>.
   
 ## 1.6 endl
-    cout << ”Hello C++-friends!“ << endl;
+    cout << "Hello C++-friends!" << endl;
 or: 
-    cout << ”Hello C++- friends!“;
+
+    cout << "Hello C++- friends!";
     cout << endl;
 or: 
-    cout<< ”Hello C++- friends!\n“;
+
+    cout<< "Hello C++- friends!\n";
 
   
