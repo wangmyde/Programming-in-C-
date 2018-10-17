@@ -73,36 +73,36 @@ To call a function, you need to pass the function name along with a list of the 
 	
     int multiply(int a, int b) // Definitions of the multiply and showResult functions
     {
-    return a * b; // The result of the multiplication of variables a and b is the return value
-	  }
-	  void showResult(int result)
-	  {
-		    cout << "Result of the multiplication: " << result << endl; // No return value, only screen output
-	  }
+        return a * b; // The result of the multiplication of variables a and b is the return value
+    }
+    void showResult(int result)
+    {
+        cout << "Result of the multiplication: " << result << endl; // No return value, only screen output
+    }
 
 ## 2.9 Scope of variables
     #include <iostream>
-	using namespace std;
-	int a,b; // Declaration of global variables a and b
-	void change() // Definition of change() function
-	{
-		int a; // Declaration of a local variable a
-		a=0;
-		{ // Second block
-			int a=20; // Declaration of a local variable a
-			cout << "The value of a within the second block is: " << a << endl;
-		}
-		cout << "The value of a within the change function is: " << a << endl;
+    using namespace std;
+    int a,b; // Declaration of global variables a and b
+    void change() // Definition of change() function
+    {
+	int a; // Declaration of a local variable a
+	a=0;
+	{ // Second block
+		int a=20; // Declaration of a local variable a
+		cout << "The value of a within the second block is: " << a << endl;
 	}
-	int main() // Calling main function = program start
-	{
-		a=b=10; // The global variables a and b are assigned the value 10
-		cout << "Before calling change function, the value of a is: " << a << " and b: " << b << endl;
-		change(); // Calling change() function
-		cout << "After calling change function, the value of a is: "<< a << " and b: " << b << endl;;
-		system("pause");
-		return 0;
-	}
+	    cout << "The value of a within the change function is: " << a << endl;
+    }
+    int main() // Calling main function = program start
+    {
+	a=b=10; // The global variables a and b are assigned the value 10
+	cout << "Before calling change function, the value of a is: " << a << " and b: " << b << endl;
+	change(); // Calling change() function
+	cout << "After calling change function, the value of a is: "<< a << " and b: " << b << endl;;
+	system("pause");
+	return 0;
+    }
 
 Screen output:
 
@@ -119,29 +119,28 @@ A function can be declared as inline. This means that there is no actual functio
 
 It should be noted that the inline declaration is only suitable for functions with a short execution time compared to the effort required for the call.
 
-	#include <cstdlib>
-	#include <iostream>
-	using namespace std;
-	inline int maximum (int a, int b) {
-	return a > b ? a : b;
-	}
-	int main()
-	{
-		cout << maximum(4,7) << endl;
-		cout << maximum(3,9) << endl;
-		system("pause");
-		return 0;
-	}
+    #include <cstdlib>
+    #include <iostream>
+    using namespace std;
+    inline int maximum (int a, int b) {
+        return a > b ? a : b;
+    }
+    int main()
+    {
+        cout << maximum(4,7) << endl;
+	cout << maximum(3,9) << endl;
+	system("pause");
+	return 0;
+    }
 等价于：
 
-	#include <cstdlib>
-	#include <iostream>
-	using namespace std;
-	int main()
-	{
-		cout << (4 > 7 ? 4 : 7) << endl;
-		cout << (3 > 9 ? 3 : 9) << endl;
-		system("pause");
-		return 0;
-	}
- 	
+    #include <cstdlib>
+    #include <iostream>
+    using namespace std;
+    int main()
+    {
+	cout << (4 > 7 ? 4 : 7) << endl;
+	cout << (3 > 9 ? 3 : 9) << endl;
+	system("pause");
+	return 0;
+    }
