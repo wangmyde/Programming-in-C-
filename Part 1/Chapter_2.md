@@ -63,17 +63,17 @@ To call a function, you need to pass the function name along with a list of the 
     void showResult(int);
     int main()
     {
-		    int result; // Declaration of a variable
-		    result = multiply(3, 4); // Calling multiply; function with constants 3 and 4 as input parameters
-		    // The result of the calculation is assigned to the result variable
-		    showResult(result); // Calling showResult function with result variable as input parameter
-		    cout << endl;
-		    getchar();
-	   }
+        int result; // Declaration of a variable
+        result = multiply(3, 4); // Calling multiply; function with constants 3 and 4 as input parameters
+        // The result of the calculation is assigned to the result variable
+        showResult(result); // Calling showResult function with result variable as input parameter
+        cout << endl;
+        getchar();
+    }
 	
-	  int multiply(int a, int b) // Definitions of the multiply and showResult functions
-	  {
-		    return a * b; // The result of the multiplication of variables a and b is the return value
+    int multiply(int a, int b) // Definitions of the multiply and showResult functions
+    {
+    return a * b; // The result of the multiplication of variables a and b is the return value
 	  }
 	  void showResult(int result)
 	  {
