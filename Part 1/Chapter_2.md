@@ -81,29 +81,29 @@ To call a function, you need to pass the function name along with a list of the 
     }
 
 ## 2.9 Scope of variables
+    #include <cstdlib>
     #include <iostream>
     using namespace std;
     int a,b; // Declaration of global variables a and b
     void change() // Definition of change() function
     {
-	int a; // Declaration of a local variable a
-	a=0;
-	{ // Second block
-		int a=20; // Declaration of a local variable a
-		cout << "The value of a within the second block is: " << a << endl;
-	}
-	    cout << "The value of a within the change function is: " << a << endl;
+        int a; // Declaration of a local variable a
+        a=0;
+        { // Second block
+            int a=20; // Declaration of a local variable a
+            cout << "The value of a within the second block is: " << a << endl;
+        }
+        cout << "The value of a within the change function is: " << a << endl;
     }
     int main() // Calling main function = program start
     {
-	a=b=10; // The global variables a and b are assigned the value 10
-	cout << "Before calling change function, the value of a is: " << a << " and b: " << b << endl;
-	change(); // Calling change() function
-	cout << "After calling change function, the value of a is: "<< a << " and b: " << b << endl;;
-	system("pause");
-	return 0;
-    }
-
+        a=b=10; // The global variables a and b are assigned the value 10
+        cout << "Before calling change function, the value of a is: " << a << " and b: " << b << endl;
+        change(); // Calling change() function
+        cout << "After calling change function, the value of a is: "<< a << " and b: " << b << endl;;
+        system("pause");
+        return 0;
+     }
 Screen output:
 
 	Before calling change function, the value of a is: 10 and b: 10
