@@ -37,7 +37,8 @@ Syntax:
     }
     
 ### 2 Conditional expression
-syntax:
+syntax: 
+
 `Value = Condition ("Question") ? Expression for TRUE : Expression for FALSE;`
 In the above example: Is a less than b? If true (i.e. a is less than), then assign a to min, if false (i.e.
 b is less than), then assign b to min.
@@ -86,6 +87,7 @@ Syntax:
   
 ### 6 do-while loops
 Syntax:
+
     do{
         statement;
     }
