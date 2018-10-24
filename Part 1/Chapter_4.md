@@ -70,13 +70,33 @@ string and C/C++ takes this fact into account by leaving space for the null-term
 2. C++ Strings
 In C++ the string class is defined in the header file <string>:
     
+ 
+    
+    
+    
+    
+    #include <iostream>
     #include <string>
     using namespace std;
-    string str1; // empty string
-    string str2 = „I am a string“;
-    string str3(10, ‚+’); // Variable str3 holds the value 10 plus sign
-    string str4(str2,2,4); // Variable str4 holds the value: am a
-    string str5 = str2 + “for testing purposes“; // Variable str5 holds the value: I am a string for testing purposes
-    
-    
+    int main()
+    {
+        string str1= "My house"; // ANNOTATION: The index of the first character of a string is 0 (just like arrays).                   
+        string str2= str1.substr(3,5); // Outputs a substring. Deletes 5 characters of the string from the
+                                       // forth character (because index starts at 0) (result: house).
+        string str3= str1.erase(1,3);  // Deletes characters 1 to 3 from the first character of the string
+                                       // (result: mouse)
+        cout << str2 << endl;
+        cout << str3 << endl;
+        string strA="Apple”;
+        string strB=“Miss Mar”;
+        string strC= strA.replace(0,2,strB); // Replaces the 0th character and the 2 following characters of string strA
+        cout << strC << endl <<endl; // with the passed string strB (result: Miss Marple)
+        string str4="abcd";
+        cout << str4.length() << endl;  // Outputs the length of the string (result: 4)
+        cout << str4.find("d") << endl; // Returns the index of the matching letter, if no letter exists
+                                        // => Output of a higher number than the length of the string
+                                        // (result: 3)
+        return 0;
+    }
+
     
