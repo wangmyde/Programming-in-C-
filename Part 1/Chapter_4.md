@@ -78,6 +78,7 @@ In C++ the string class is defined in the header file <string>.
     string str4(str2,2,4); // Variable str4 holds the value: am a
     string str5 = str2 + “for testing purposes“; // Variable str5 holds the value: I am a string for testing purposes
     
+    
     #include <iostream>
     #include <string>
     using namespace std;
