@@ -40,7 +40,7 @@ size:
 C++ has two types of strings:
 > C-style strings: single-dimensional arrays of characters (char-variables)  
 > C++-strings: string class from the standard library
-1. C-Strings
+#### 1 C-Strings
 The `char` data type is used for a single character.
 
     char character = 'A';
@@ -67,13 +67,7 @@ string and C/C++ takes this fact into account by leaving space for the null-term
         system("pause");
      }
 
-2. C++ Strings
-In C++ the string class is defined in the header file <string>:
-    
- 
-    
-    
-    
+#### 2 C++ Strings
     
     #include <iostream>
     #include <string>
