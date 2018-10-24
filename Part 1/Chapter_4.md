@@ -38,5 +38,6 @@ size:
     
 ### 3 Strings (Character strings)
 C++ has two types of strings:
->> C-style strings: single-dimensional arrays of characters (char-variables)
+>> C-style strings: single-dimensional arrays of characters (char-variables) 
 >> C++-strings: string class from the standard library
+
