@@ -68,7 +68,7 @@ string and C/C++ takes this fact into account by leaving space for the null-term
      }
 
 #### 2 C++ Strings
-In C++ the string class is defined in the header file `<string>`.  
+In C++ the `string` class is defined in the header file `<string>`.  
     
     #include <string>
     using namespace std;
@@ -79,6 +79,7 @@ In C++ the string class is defined in the header file `<string>`.
     string str5 = str2 + “for testing purposes“; // Variable str5 holds the value: I am a string for testing purposes
     
 Eg.
+
     #include <iostream>
     #include <string>
     using namespace std;
