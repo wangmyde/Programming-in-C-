@@ -70,6 +70,7 @@ string and C/C++ takes this fact into account by leaving space for the null-term
 2. C++ Strings
 In C++ the string class is defined in the header file <string>.
     
+    
     #include <string>
     using namespace std;
     string str1; // empty string
