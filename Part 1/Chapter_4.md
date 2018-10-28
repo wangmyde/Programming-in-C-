@@ -73,7 +73,7 @@ In C++ the `string` class is defined in the header file `<string>`.
     #include <string>
     using namespace std;
     string str1; // empty string
-    string str2 = „I am a string“;
+    string str2 = "I am a string";
     string str3(10, ‚+’); // Variable str3 holds the value 10 plus sign
     string str4(str2,2,4); // Variable str4 holds the value: am a
     string str5 = str2 + “for testing purposes“; // Variable str5 holds the value: I am a string for testing purposes
