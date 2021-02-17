@@ -352,3 +352,49 @@ int main()
 }
 ```
 
+### 4. Smart pointer
+```
+#include <memory>
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	shared_ptr<int> p1 = make_shared<int>(1); // debug时，箭头指到此行时，只是about to excute
+	cout << "p1.use_count(): " << p1.use_count() << endl;
+	shared_ptr<int> p2 = p1; // p1和p2指向同一个内存空间
+	cout << "p2.use_count(): " << p2.use_count() << endl;
+	cout << "p1: " << p1 << endl;
+	cout << "p2: " << p2 << endl;
+	*p1 = 3;
+	cout << "*p1: " << *p1 << endl;
+	cout << "p1: " << p1 << endl;
+	cout << "p1.use_count(): " << p1.use_count() << endl;
+	cout << "*p2: " << *p2 << endl;
+	cout << "p2: " << p2 << endl;
+	cout << "p2.use_count(): " << p2.use_count() << endl;
+	
+
+	shared_ptr<int> p3;
+	if (p3)
+		cout << "True" << endl;
+	else
+		cout << "False" << endl;
+
+	return 0;
+ }
+ ```
+ ```
+ p1.use_count(): 1
+p2.use_count(): 2
+p1: 0118CCAC
+p2: 0118CCAC
+*p1: 3
+p1: 0118CCAC
+p1.use_count(): 2
+*p2: 3
+p2: 0118CCAC
+p2.use_count(): 2
+False
+```
