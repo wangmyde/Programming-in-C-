@@ -224,7 +224,7 @@ int main()
 ```
 class std::initializer_list<int>
 ```
-### 3. Lambda
+### 3. Lambda: 被捕获的变量的值是在创建时被copy，而不是调用时
 ```
 int main()
 {
@@ -249,7 +249,7 @@ void fcn1()
 {
 	size_t v1 = 42;  // local variable
 					 // copies v1 into the callable object named f
-	auto f = [v1] { return v1; };
+	auto f = [v1] { return v1; }; // v1在f创建时已经被copy了，故j为42
 	v1 = 0;
 	auto j = f(); // j is 42; f stored a copy of v1 when we created it
 	cout << j << endl;
