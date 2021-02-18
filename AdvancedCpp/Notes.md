@@ -517,3 +517,100 @@ n
 g
 HELLO WORLD!
 ```
+### 6. Vector
+```
+#include <memory>
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	vector<int> v1;
+	vector<int> v2(v1);
+	vector<int> v3(4, 5); // 4个重复的5
+	vector<int> v5{ 1,2,3,4,5 };
+	vector<int> v6 = { 1,2,3,4,5,6,7 }; // v5和v6初始化方式是一样的
+	v1 = v5;
+
+	vector<string> v7{ "a", "an", "the" }; // 不能放在 vector<string> v7( "a", "an", "the" );
+	return 0;
+}
+```
+```
+#include <memory>
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	vector<int> v2;
+	for (int i = 0; i != 10; ++i)
+		v2.push_back(i);
+
+	for (auto& i : v2)
+	{
+		i *= i;
+		cout << i << endl;
+	}
+
+	vector<int> v3;
+	for (decltype(v3.size()) i = 0; i != 10; ++i)
+	{
+		v3.push_back(i);
+		cout << i << endl;
+	}
+		
+		
+	return 0;
+}
+```
+### 7. Iterator
+```
+#include <memory>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <typeinfo>
+
+using namespace std;
+
+int main()
+{
+	string s("some thing");
+	if (s.begin() != s.end())
+	{
+		auto it = s.begin();
+		*it = toupper(*it); //和指针类似，通过解引用地带其来获取它所指示的元素
+		cout << *it << endl;
+	}
+
+	for (auto it = s.begin(); it != s.end() && !isspace(*it); ++it) //iterator使用++运算符来从一个元素移动到下一个元素
+		*it = toupper(*it); // iterator的精确无从所知，但一般使用iterator来表示 vector<int>::iterator it;
+	                        // 或vector<int>::const_iterator it,即const iterator
+	                        // (*it).empty():必须有（*it）先对ierator进行解引用，不可以是*it.empty()
+	                        // 或者是 it->empty() 
+
+
+
+	vector<int> v = { 1,2,3 };
+	cout << typeid(v.begin()).name() << endl;
+	const vector<int> v1 = { 1,2,3 };
+	cout << typeid(v1.begin()).name() << endl; //因为v1是const，故iterator也是const
+	auto it1 = v1.cbegin();
+	auto it2 = v1.cend(); // cbegin和cend返回的是const_iterator
+
+	vector<int> vt{ 2,3,4,5,6 };
+	auto it = vt.begin();
+	cout << "it = vt.begin(): " << *it << endl;
+	cout << "it + 1 value in vector: " << *(it + 1) << endl;
+	cout << "it + 4 value in vector: " << *(it + 4) << endl;
+
+	return 0;
+}
+```
