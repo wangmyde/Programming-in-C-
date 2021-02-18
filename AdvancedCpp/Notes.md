@@ -28,6 +28,9 @@ int main()
   auto res = add(2,3.0);
  
   cout << res << " has type " << typeid(res).name() << endl;
+  
+  vector<int> v1{ 1,2,3 };
+  auto it = v1.begin();
   static_assert(std::is_same<vector<int>::iterator ,decltype(it)>::value, "the type is wrong");
  
  
