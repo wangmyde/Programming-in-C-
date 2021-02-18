@@ -472,3 +472,48 @@ int main()
 	return 0;
  }
  ```
+### 5. String
+```
+#include <memory>
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	string s = "I am busy."; // string class doesn't have null terminating 
+	cout << s.size() << endl; // cout: 10, 此处返回的是一个string::size_type类型的值，并非int或unsigned
+	cout << s[9] << endl; // cout "."
+
+	string st1(10, 'c'); //cout: cccccccccc
+
+	string str("some string");
+	for (auto c : str)        // 这里c的类型是char
+		cout << c << endl;
+
+	string str1("Hello World!");
+	for (auto &c : str1) // 注意用 &c
+		c = toupper(c);
+	cout << str1 << endl;
+
+	return 0;
+}
+```
+```
+10
+.
+s
+o
+m
+e
+
+s
+t
+r
+i
+n
+g
+HELLO WORLD!
+```
